@@ -1,0 +1,132 @@
+body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
+.fileupload-buttonbar .btn,
+.fileupload-buttonbar .toggle {
+  margin-bottom: 5px;
+}
+.progress-animated .progress-bar,
+.progress-animated .bar {
+  background: url(../img/progressbar.gif) !important;
+  filter: none;
+}
+.fileupload-loading {
+  float: right;
+  width: 32px;
+  height: 32px;
+  background: url(../img/loading.gif) center no-repeat;
+  background-size: contain;
+  display: none;
+}
+.fileupload-processing .fileupload-loading {
+  display: block;
+}
+.files audio,
+.files video {
+  max-width: 300px;
+}
+
+@media (max-width: 767px) {
+  .fileupload-buttonbar .toggle,
+  .files .toggle,
+  .files .btn span {
+    display: none;
+  }
+  .files .name {
+    width: 80px;
+    word-wrap: break-word;
+  }
+  .files audio,
+  .files video {
+    max-width: 80px;
+  }
+}

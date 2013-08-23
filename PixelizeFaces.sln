@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelizeFaces.WebUI", "PixelizeFaces.WebUI\PixelizeFaces.WebUI.csproj", "{2EB8B4C3-47DE-4F23-8DC7-AC2B9A46CCE0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelizeFaces.Domain", "PixelizeFaces.Domain\PixelizeFaces.Domain.csproj", "{7692C75E-834A-4CBB-AF7F-F93518AECB17}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceDetection", "FaceDetection\FaceDetection.csproj", "{5FD347C6-A5E4-41BB-9328-E2C1FA160100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelizeFaces.WebUI", "PixelizeFaces.WebUI\PixelizeFaces.WebUI.csproj", "{1F42C2EF-0781-471B-BD66-C2573E53C6CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2EB8B4C3-47DE-4F23-8DC7-AC2B9A46CCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2EB8B4C3-47DE-4F23-8DC7-AC2B9A46CCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2EB8B4C3-47DE-4F23-8DC7-AC2B9A46CCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2EB8B4C3-47DE-4F23-8DC7-AC2B9A46CCE0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7692C75E-834A-4CBB-AF7F-F93518AECB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7692C75E-834A-4CBB-AF7F-F93518AECB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7692C75E-834A-4CBB-AF7F-F93518AECB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,6 +21,10 @@ Global
 		{5FD347C6-A5E4-41BB-9328-E2C1FA160100}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FD347C6-A5E4-41BB-9328-E2C1FA160100}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FD347C6-A5E4-41BB-9328-E2C1FA160100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F42C2EF-0781-471B-BD66-C2573E53C6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F42C2EF-0781-471B-BD66-C2573E53C6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F42C2EF-0781-471B-BD66-C2573E53C6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F42C2EF-0781-471B-BD66-C2573E53C6CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

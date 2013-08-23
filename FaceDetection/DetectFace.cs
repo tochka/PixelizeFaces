@@ -1,42 +1,40 @@
-﻿using Emgu.CV;
-using Emgu.CV.Structure;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Emgu.CV;
+using Emgu.CV.Structure;
 
 namespace FaceDetection
 {
-    class DetectFace
+    public class DetectFace
     {
-        private  HaarCascade _faceHaar;
+        private readonly HaarCascade _cascadeClassifier;
 
-        public DetectFace(string haarcascadePath)
+        public DetectFace(string cascadeFileName)
         {
-            _faceHaar = new HaarCascade(haarcascadePath);
+            _cascadeClassifier = new HaarCascade(cascadeFileName);
         }
 
         public IEnumerable<Rectangle> Detect(Bitmap picture)
         {
-             var lstFaceDetect =new List<Rectangle>();
+            var image = new Image<Bgr, Byte>(picture);
 
-             Image<Bgr, Byte> image = new Image<Bgr, byte>(picture);
-             Image<Gray, Byte> gray = image.Convert<Gray, Byte>(); 
-             
-             gray._EqualizeHist();
-             
-             var facesDetected = gray.DetectHaarCascade(
-                _faceHaar, 
-                1.1, 
-                10, 
-                Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, 
-                new Size(20, 20));
-
-            foreach (var f in facesDetected[0])            
-                lstFaceDetect.Add(f.rect);               
-            return lstFaceDetect;
-        }
+            var detects = new List<Rectangle>();
+            using (var gray = image.Convert<Gray, Byte>()) 
+            {
+                //normalizes brightness and increases contrast of the image
+                gray._EqualizeHist();
+                
+                var facesDetected = gray.DetectHaarCascade(
+                    _cascadeClassifier,
+                    2,
+                    10,
+                    Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING,
+                    new Size(20, 20));
+                detects.AddRange(facesDetected[0].Select(face => face.rect));
+            }
+            return detects;
+        }        
     }
 }

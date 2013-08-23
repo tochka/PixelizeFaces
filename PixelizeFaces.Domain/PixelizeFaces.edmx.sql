@@ -28,12 +28,12 @@ GO
 -- --------------------------------------------------
 
 -- Creating table 'PictureSet'
-CREATE TABLE [dbo].[PictureSet] (
+CREATE TABLE [dbo].[Pictures] (
     [PictureId] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [ImageMimeType] nvarchar(50)  NOT NULL,
-    [BeforePicture] tinyint  NOT NULL,
-    [AfterPicture] tinyint  NOT NULL
+    [BeforePicture] image  NOT NULL,
+    [AfterPicture] image  NOT NULL
 );
 GO
 
@@ -42,8 +42,8 @@ GO
 -- --------------------------------------------------
 
 -- Creating primary key on [PictureId] in table 'PictureSet'
-ALTER TABLE [dbo].[PictureSet]
-ADD CONSTRAINT [PK_PictureSet]
+ALTER TABLE [dbo].[Pictures]
+ADD CONSTRAINT [PK_Pictures]
     PRIMARY KEY CLUSTERED ([PictureId] ASC);
 GO
 

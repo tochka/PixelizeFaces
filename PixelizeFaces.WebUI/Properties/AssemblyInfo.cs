@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PixelizeFaces.WebUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Челябинский Электрометаллургический Комбинат")]
 [assembly: AssemblyProduct("PixelizeFaces.WebUI")]
-[assembly: AssemblyCopyright("© Microsoft, 2013")]
+[assembly: AssemblyCopyright("© Челябинский Электрометаллургический Комбинат, 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для ID-идентификации библиотеки типов, если этот проект видим для COM
-[assembly: Guid("f4e960ea-7d27-41c9-ab4f-0b7f6574df50")]
+[assembly: Guid("ac4ea2ab-4f07-4ad6-9252-7b9ab2faf160")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
