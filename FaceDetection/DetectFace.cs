@@ -28,8 +28,8 @@ namespace FaceDetection
                 
                 var facesDetected = gray.DetectHaarCascade(
                     _cascadeClassifier,
-                    2,
-                    10,
+                    1.1,
+                    10, 
                     Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING,
                     new Size(20, 20));
                 detects.AddRange(facesDetected[0].Select(face => face.rect));
