@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<div class="hero-unit">
+    <h1>Pixelize!</h1>
+    <p>If you a fan of Facebook or Instagram, but you don't want to be
+        noticed on the Web then Pixelizer is the exactly thing you need to
+        hide from everyone behind the mask of squares.
+        Pixelizer hides just your face and doesn't impact on the rest of your
+        photo!
+    </p>
+    
+    <h3>Everything works automatically!!! </h3>
+    <p>You don't want to use Photoshop to black out all the faces on yourphotos? You find this process boring and tedious?
+    Here is the solution: use our magic service and you will have plenty of time to create some more pictures for Facebook.
+    </p>
+
+You need just to do three simple steps to hide your personality:
+    <ol>
+    <li>Choose your photo 
+        <br />
+        <img alt="origanel" src="@Url.Content("~/Content/img/Original.jpg")" width="200em" height="200em" />
+    </li>
+    <li>Press "Upload" button</li>
+    <li>Voila! Your face is hidden behind pixels and you just need to download your photo and post it to your favorite social network!!!
+        <br />
+        <img alt="origanel" src="@Url.Content("~/Content/img/Modified.JPG")" width="200em" height="200em" />
+    </li>
+    </ol>
+    <br />
+    @using (Html.BeginForm("AddPicture", "home", FormMethod.Post, new {enctype="multipart/form-data"}))  {               
+       <input type="file" name="image" />
+       <br />      
+       <input class="btn btn-large btn-primary" type="submit" name="Submit" id="SubmitSingle" value="Upload" />
+     }
+</div>

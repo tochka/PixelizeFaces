@@ -1,0 +1,30 @@
+﻿@model PixelizeFaces.Domain.Entities.Picture
+           
+@{
+    ViewBag.Title = "ViewPictures";
+}
+
+<div class="row">
+    <div class="span6">
+        <h3>Original</h3>
+    </div>
+    <div class="span6">
+        <h3>Modified</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="span6">
+        <img alt="Original" src="@Url.Action("GetImage", "Home", new { Model.PictureId, original=true })" />
+    </div>
+    <div class="span6">
+        <img alt="Modified" src="@Url.Action("GetImage", "Home", new { Model.PictureId, original=false })" />
+    </div>
+</div>
+<br />
+<div class="row">
+<div class="span6">
+</div>
+<div class="span6">
+    @Html.ActionLink("Download", "Download", new { Model.PictureId }, new { @class = "btn" })
+</div>
+</div>
